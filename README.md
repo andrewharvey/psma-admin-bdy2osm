@@ -1,0 +1,51 @@
+# psma-admin-bdys2osm
+
+This repo converts [PSMA Administrative Boundaries](https://data.gov.au/dataset/psma-administrative-boundaries) data into [OSM XML](https://wiki.openstreetmap.org/wiki/OSM_XML).
+
+The data publisher has [completed the OSMF CC BY waiver](https://wiki.openstreetmap.org/wiki/File:Department_of_Industry_Innovation_and_Science_ODbl_permission_Administrative_Boundaries.pdf) clearing the licensing aspect of an OSM import.
+
+This conversion process outputs results as [relations](https://wiki.openstreetmap.org/wiki/Relation) ensuring shared borders are only represented once.
+
+## Tagging
+
+### Local Government Areas
+```
+type=boundary
+boundary=administrative
+admin_level=6
+place=municipality
+name=
+short_name=
+```
+
+With optional tags `wikidata`, `website`, `phone`, `email`.
+
+### Suburbs / Localities
+```
+type=boundary
+boundary=administrative
+admin_level=10
+place=suburb
+name=
+```
+
+With optional tags `postal_code`, `wikidata`.
+
+## Processing
+
+https://github.com/andrewharvey/psma-admin-bdys-data is used to help process the upstream data, either run through that process or shortcut to the prebuild files using:
+
+    make download extract
+
+Convert the Shapefiles to GeoJSON
+
+    yarn install
+    make geojson geojsonOSM
+
+Convert the GeoJSON to TopoJSON
+
+    make topojson
+
+Convert the TopoJSON to OSM
+
+   make osm

@@ -1,0 +1,14 @@
+{
+  "name": "psma-admin-bdy2osm",
+  "version": "1.0.0",
+  "description": "Convet PSMA Administrative Boundaries into OSM",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Harvey <andrew.harvey4@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "geojson-map": "git://github.com/andrewharvey/geojson-map",
+    "topo2osm": "git://github.com/andrewharvey/topo2osm"
+  }
+}
