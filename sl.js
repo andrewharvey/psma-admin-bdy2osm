@@ -11,8 +11,8 @@ function sl(feature) {
     feature.properties = {
         type: 'boundary',
         boundary: 'administrative',
-        admin_level: '10',
-        place: 'suburb',
+        admin_level: p.LOCCL_CODE === 'D' ? '7' : '10',
+        place: p.LOCCL_CODE === 'D' ? 'district' : 'suburb',
         name: titleCase(p.NAME),
     };
     return feature;

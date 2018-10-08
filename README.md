@@ -29,6 +29,8 @@ place=suburb
 name=
 ```
 
+Data also contains ACT Districts which are mapped to `admin_level=7` and SA Hundreds which are ommitted.
+
 With optional tags `postal_code`, `wikidata`.
 
 ## Processing
@@ -40,7 +42,7 @@ https://github.com/andrewharvey/psma-admin-bdys-data is used to help process the
 Convert the Shapefiles to GeoJSON
 
     yarn install
-    make geojson geojsonOSM
+    make geojson geojson_osm
 
 Convert the GeoJSON to TopoJSON
 

@@ -20,6 +20,9 @@ topojson:
 osm:
 	./osm.sh
 
+pack:
+	./pack.sh
+
 clean:
 	rm -rf *.tar.xz Local* Suburbs* *.topojson *.geojson *.osm
 
