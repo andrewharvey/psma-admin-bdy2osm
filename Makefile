@@ -9,18 +9,16 @@ extract:
 	tar -xJvvf Suburbs\ -\ Localities\ AUGUST\ 2018.tar.xz
 
 geojson:
-	ogr2ogr -f GeoJSON -select 'LGA_NAME,ABB_NAME' LGA.geojson 'Local Government Areas AUGUST 2018.shp'
-	ogr2ogr -f GeoJSON -select 'NAME' SL.geojson 'Suburbs - Localities AUGUST 2018.shp'
+	./geojson.sh
 
-geojsonOSM:
-	./lga.js < LGA.geojson > LGA_OSM.geojson
-	./sl.js < SL.geojson > SL_OSM.geojson
+geojson_osm:
+	./geojson_osm.sh
 
 topojson:
-	node --max_old_space_size=4096 /usr/bin/geo2topo -q0 -o PSMA_Admin_Bdy.topojson LGA=LGA_OSM.geojson SL=SL_OSM.geojson
+	./topojson.sh
 
 osm:
-	node --max_old_space_size=4096 ./node_modules/.bin/topo2osm < PSMA_Admin_Bdy.topojson > PSMA_Admin_Bdy.osm
+	./osm.sh
 
 clean:
 	rm -rf *.tar.xz Local* Suburbs* *.topojson *.geojson *.osm
