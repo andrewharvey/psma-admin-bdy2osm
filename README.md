@@ -50,4 +50,8 @@ Convert the GeoJSON to TopoJSON
 
 Convert the TopoJSON to OSM
 
-   make osm
+    make osm
+
+# Outputs
+
+Processed outputs at https://tianjara.net/data/PSMA_AdminBdy_OSM/
