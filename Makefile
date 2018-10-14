@@ -17,6 +17,9 @@ geojson_osm:
 topojson:
 	./topojson.sh
 
+simplify:
+	./simplify.sh
+
 osm:
 	./osm.sh
 

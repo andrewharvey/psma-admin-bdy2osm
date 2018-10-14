@@ -9,6 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "geojson-map": "git://github.com/andrewharvey/geojson-map",
-    "topo2osm": "git://github.com/andrewharvey/topo2osm"
+    "topo2osm": "git://github.com/andrewharvey/topo2osm",
+    "topojson-simplify": "^3.0.2"
   }
 }
