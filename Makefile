@@ -1,4 +1,4 @@
-all: download extract geojson geojsonOSM topojson osm
+all: download extract geojson geojson_osm topojson osm pack
 
 download:
 	wget 'https://tianjara.net/data/psma-admin-bdys/Suburbs%20-%20Localities%20AUGUST%202018.tar.xz'
@@ -24,5 +24,5 @@ pack:
 	./pack.sh
 
 clean:
-	rm -rf *.tar.xz Local* Suburbs* *.topojson *.geojson *.osm
+	rm -rf *.tar.xz Local* Suburbs* geojson geojson_osm topojson osm
 
