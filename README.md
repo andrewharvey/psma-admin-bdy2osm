@@ -48,6 +48,10 @@ Convert the GeoJSON to TopoJSON
 
     make topojson
 
+Simplify the TopoJSON to reduce excess nodes
+
+    make simplify
+
 Convert the TopoJSON to OSM
 
     make osm
