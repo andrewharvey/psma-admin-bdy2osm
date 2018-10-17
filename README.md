@@ -25,13 +25,12 @@ With optional tags `wikidata`, `website`, `phone`, `email`.
 type=boundary
 boundary=administrative
 admin_level=10
-place=suburb
 name=
 ```
 
-Data also contains ACT Districts which are mapped to `admin_level=7` and SA Hundreds which are ommitted.
+Data also contains ACT Districts which are mapped to `admin_level=7` + `place=district` and SA Hundreds which are ommitted.
 
-With optional tags `postal_code`, `wikidata`.
+With optional tags `place`, `postal_code`, `wikidata`.
 
 ## Processing
 
@@ -59,3 +58,4 @@ Convert the TopoJSON to OSM
 # Outputs
 
 Processed outputs at https://tianjara.net/data/PSMA_AdminBdy_OSM/
+Processed outputs at https://tianjara.net/data/PSMA_AdminBdy_OSM_Simplified/
