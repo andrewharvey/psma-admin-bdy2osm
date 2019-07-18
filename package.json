@@ -10,6 +10,7 @@
   "dependencies": {
     "geojson-map": "git://github.com/andrewharvey/geojson-map",
     "topo2osm": "git://github.com/andrewharvey/topo2osm",
+    "topojson-server": "^3.0.0",
     "topojson-simplify": "^3.0.2"
   }
 }
