@@ -58,4 +58,3 @@ Convert the TopoJSON to OSM
 # Outputs
 
 Processed outputs at https://tianjara.net/data/PSMA_AdminBdy_OSM/
-Processed outputs at https://tianjara.net/data/PSMA_AdminBdy_OSM_Simplified/
